@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #070707;
+    --bg-card: #0d0c0a;
+    --gold: #c9a227;
+    --gold-light: #e8cd82;
+    --gold-deep: #8a6a1e;
+    --gold-border: #3a311a;
+    --text-primary: #f2ecdd;
+    --text-muted: #8c8273;
+    --input-bg: #12100d;
+}
+
+/* Accesibilidad lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Layout Principal */
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column; /* Móvil primero: Apilado vertical */
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 162, 39, 0.15);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+}
+
+/* Formulario */
+.formulario {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Logotipo */
+.logotipo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: var(--gold-light);
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.logotipo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+}
+
+.slogan {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-top: 0.2rem;
+}
+
+/* Header Login */
+.header-login {
+    margin-bottom: 1.2rem;
+    margin-top: 0.9rem;
+}
+
+.header-login h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.header-login p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    
+}
+
+/* Campos de formulario */
+.datos {
+    border: none;
+    margin-bottom: 0.5rem;
+    margin-top: 0.7em;
+}
+
+.field-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+}
+
+.input-container {
+    position: relative;
+    display: block;
+  
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.itext {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--gold-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.itext:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(201, 162, 39, 0.2);
+}
+
+/* Opciones Complementarias */
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.textterm {
+    color: var(--text-muted);
+}
+
+.olvido-pass {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.olvido-pass:hover {
+    color: var(--gold-light);
+}
+.loginBoton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton_inicio {
+    width: 100%;
+    background: linear-gradient(135deg, #c9a227 0%, #8a6a1e 100%);
+    color: #000000;
+    padding: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.boton_inicio:hover {
+    background: linear-gradient(135deg, #e8cd82 0%, #c9a227 100%);
+    box-shadow: 0 0 15px rgba(201, 162, 39, 0.3);
+}
+
+
+.divider {
+    text-align: center;
+    margin: 1.2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gold-border);
+    z-index: 1;
+}
+
+.divider small {
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg-card);
+    padding: 0 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+
+.redireccionRegistro a {
+    color: var(--gold-deep);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.redireccionRegistro a:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 0.80rem;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-top: 5rem;
+}
+
+
+.imagen-destacada {
+    display: none;
+    
+}
+
+/* Pantallas medianas y grandes (tablets y PC) */
+@media screen and (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .formulario {
+        width: 50%;
+        padding: 2.5rem 3rem;
+    }
+
+    .imagen-destacada {
+        display: block; /* Muestra la imagen únicamente en pantallas grandes */
+        width: 50%;
+        min-height: auto;
+        background-image: url('/img/logo_perfumes.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

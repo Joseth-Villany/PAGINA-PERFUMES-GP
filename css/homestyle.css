@@ -1,0 +1,143 @@
+:root {
+    --bg-primary: #070707;
+    --bg-card: #0d0c0a;
+    --gold: #c9a227;
+    --gold-light: #e8cd82;
+    --gold-deep: #8a6a1e;
+    --gold-border: #3a311a;
+    --text-primary: #f2ecdd;
+    --text-muted: #8c8273;
+    --input-bg: #12100d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    background-color: var(--bg-card);
+    padding: 2em 2em 2em 2em;
+    text-align: center;
+    border: 1px solid var(--gold-border);
+    width: 90%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+    align-items: center;
+}
+.logo img{
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+     position: absolute;
+     left: 35rem;
+}
+.lista_nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;   
+}
+ul{
+    list-style: none;
+   
+}
+a{
+    text-decoration: none;
+    color: var(--text-muted);
+}
+a:hover{
+    color: var(--gold-light);
+}
+.thirty_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+}
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Campo de entrada (Oculto inicialmente) */
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  font-size: 15px;
+  opacity: 0;
+  transition: width 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+  color: var(--text-primary);
+}
+
+/* Botón con el icono */
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-card); /* Azul de Bootstrap */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.search-btn:hover {
+  background-color: var(--gold-deep);
+  border: 0.066rem solid var(--text-primary);
+}
+
+/* Estado activo: cuando JavaScript añade la clase '.active' al formulario */
+.search-form.active .search-input {
+  width: 13.75rem;
+  padding: 0.5rem 0.9375rem;
+  opacity: 1;
+  border: 0.066rem solid #ccc;
+  margin-right: 0.2rem;
+}
+.carrito{
+    font-size: 1.5em;
+}
+.perfil{
+    font-size: 1.5em;
+}
+
+
+main{
+    background-color: var(--bg-card);
+    padding: 13em 12em 13em 12em;
+    width: 90%;
+    text-align: center;
+    margin-top: 1em;
+    border: 1px solid var(--gold-border);
+}
+footer{
+    background-color: var(--bg-card);
+    padding: 4em 12em 4em;
+    width: 90%;
+    border: 1px solid var(--gold-border);
+    margin-top: 1em;
+}

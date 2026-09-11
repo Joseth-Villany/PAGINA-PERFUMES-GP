@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN de Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <title>Inicio de Sesión - Perfumes GP</title>
+</head>
+<body>
+
+    <main class="main-container">
+        
+        <article class="formulario xs_12 m_6 l_6 xl_6">
+            
+            <header class="logotipo">
+                <!-- Icono de corona / gemas -->
+                <i class="bi bi-gem logo-icon" aria-hidden="true"></i>
+                <h1>Perfumes GP</h1>
+                <p class="slogan">— ESENCIAS QUE DEJAN HUELLA —</p>
+            </header>
+
+            <section class="header-login">
+                <h2>Iniciar Sesión</h2>
+                <p>Bienvenido de nuevo, ingresa a tu cuenta</p>
+            </section>
+
+            <form action="" class="login-form">
+                
+                <fieldset class="datos">
+                    <legend class="sr-only">Datos de acceso</legend>
+
+                    <p class="field-group">
+                        <label for="gmail">Correo Electrónico</label>
+                        <label class="input-container">
+                            <!-- Icono de sobre/correo -->
+                            <i class="bi bi-envelope input-icon" aria-hidden="true"></i>
+                            <input class="itext xs_12" id="gmail" name="email" type="email" placeholder="Ingresa tu correo electrónico" required autocomplete="email">
+                        </label>
+                    </p>
+
+                    <p class="field-group">
+                        <label for="pass">Contraseña</label>
+                        <label class="input-container">
+                            <i class="bi bi-lock input-icon" aria-hidden="true"></i>
+                            <input class="itext xs_12" id="pass" name="password" type="password" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
+                        </label>
+                    </p>
+                </fieldset>
+
+                <section class="opciones-login">
+                    <label class="recordar">
+                        <input type="checkbox" id="check-term" name="remember">
+                        <small class="textterm">Recordarme</small>
+                    </label>
+                    <a href="recuperacion.html" class="olvido-pass"><small>¿Olvidaste tu contraseña?</small></a>
+                </section>
+
+                <p class="loginBoton">
+                    <a class="boton_inicio xs_12" href="/home.html">Iniciar Sesión</a>
+                </p>
+
+                <p class="divider" role="separator">
+                    <small>o</small>
+                </p>
+
+                <section class="redireccionRegistro">
+                    <p>¿No tienes una cuenta? <a href="index.html">Unete a nuestra familia</a></p>
+                </section>
+
+                <footer>
+                    <p class="footer-note"><small>DESCUBRE EL PERFUME PERFECTO PARA TI</small></p>
+                </footer>
+            </form>
+
+        </article>
+
+        <aside class="imagen-destacada xs_12 m_6 l_6 xl_6" aria-label="Imagen promocional de producto"></aside>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --bg-primary: #0B0A08;
+    --bg-secondary: #161310;
+    --gold: #C9A227;
+    --gold-light: #E8CD82;
+    --gold-deep: #8A6A1E;
+    --text-primary: #F2ECDD;
+    --text-muted: #A79C86;
+    --blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.formulario {
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo h1 {
+    color: var(--gold-light);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.datos {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.itext {
+    padding: 0.9em;
+    background-color: #1f1b16;
+    border: 1px solid var(--gold-deep);
+    border-radius: 10px;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.itext:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(201, 162, 39, 0.3);
+}
+
+.terminos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.textterm {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.registroB {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.boton_registro {
+    background-color: var(--gold);
+    color: var(--bg-primary);
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.boton_registro:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.redireccionLogin {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.redireccionLogin a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.redireccionLogin a:hover {
+    text-decoration: underline;
+}
+
+.image {
+    background-image: url(/img/logo_perfumes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+/* Sistema de columnas responsivas básicas */
+.xs_12 { width: 100%; }
+
+@media screen and (min-width: 768px) {
+    .m_6 { width: 50%; }
+    .l_6 { width: 50%; }
+    .xl_6 { width: 50%; }
+}   
