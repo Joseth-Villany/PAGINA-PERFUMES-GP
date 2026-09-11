@@ -141,7 +141,7 @@ main{
 .fondo{
     margin-top: 10rem;
     width: 100%;
-    background-image: url(img/logo_perfumes2.png);
+    background-image: url("img/logo_perfumes2.png");
     
     background-repeat: no-repeat;
     background-size: cover;     
