@@ -290,7 +290,7 @@ label {
         display: block; /* Muestra la imagen únicamente en pantallas grandes */
         width: 50%;
         min-height: auto;
-        background-image: url('/img/logo_perfumes.png');
+        background-image: url('img/logo_perfumes.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
