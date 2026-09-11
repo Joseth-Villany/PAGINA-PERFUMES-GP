@@ -28,13 +28,14 @@ header{
     background-color: var(--bg-card);
     padding: 2em 2em 2em 2em;
     text-align: center;
-    border: 1px solid var(--gold-border);
-    width: 90%;
-    margin-top: 1em;
+    border: 1px solid var(--gold-border) 30%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 10em;
     align-items: center;
+    position: fixed;
+    top: 0;   
 }
 .logo img{
     border-radius: 50%;
@@ -42,6 +43,7 @@ header{
     height: 5em;
 
 }
+
 .navegacion{
     display: flex;
     justify-content: space-between;
@@ -127,12 +129,116 @@ a:hover{
 
 
 main{
-    background-color: var(--bg-card);
-    padding: 13em 12em 13em 12em;
-    width: 90%;
+    width: 95%;
     text-align: center;
-    margin-top: 1em;
-    border: 1px solid var(--gold-border);
+    margin-top: 3rem;
+    border: 1px solid var(--input-bg);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fondo{
+    margin-top: 10rem;
+    width: 100%;
+    background-image: url(/img/logo_perfumes2.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;     
+    padding: 15em;
+}
+.contenido{
+    background:
+        radial-gradient(
+            circle 450px at 0% 0%,
+            var(--gold-border),
+            transparent 80%
+        ),
+        radial-gradient(
+            circle 500px at 100% 0%,
+            var(--gold-border),
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 600px at 50% 100%,
+            var(--gold-border),
+            transparent 70%
+        ),
+        var(--bg-primary);
+        width: 95%;
+        padding: 2rem;
+        display: flex;
+        justify-content: end;
+        margin-top: 2rem;
+        border-radius: 2rem; 
+
+}
+.categorias{
+    background-color: var(--bg-card);
+    border: 0.03rem solid var(--gold-border);
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    text-align: center; 
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;    
+}
+.contenido section{
+    padding: 0.6rem;
+    border-radius: 2rem;
+}
+.contenido article{
+    border: 1px solid var(--gold-light);
+}
+.contenido article strong{
+    color: var(--gold);
+}
+.contenido img{
+    width: 15rem;
+}
+.first_column{
+    border: 1px var(--gold);
+}
+.first_column article{
+    background-color: var(--bg-card);
+    margin-top: 1rem;
+    width: 100%;
+    color: var(--text-muted);
+    padding-top: 1em;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+
+.second_column{
+    border: 1px var(--gold);
+}
+
+.second_column article{
+    background-color: var(--bg-card);
+    margin-top: 1rem;
+    width: 100%;
+    color: var(--text-muted);
+    padding-top: 1em;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.thirty_column{
+    border: 1px var(--gold);
+}
+.thirty_column article{
+    background-color: var(--bg-card);
+    margin-top: 1rem;
+    width: 100%;
+    color: var(--text-muted);
+    padding-top: 1em;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 footer{
     background-color: var(--bg-card);
