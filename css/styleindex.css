@@ -27,6 +27,16 @@ body {
     align-items: center;
 }
 
+body h1, h2 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.4rem;
+}
+
+body h3, h5, p, label, input {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
 .main-container {
     width: 100%;
     max-width: 1200px;
