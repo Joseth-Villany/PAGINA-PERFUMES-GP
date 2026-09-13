@@ -15,8 +15,8 @@
 /* Accesibilidad lectores de pantalla */
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
     padding: 0;
     margin: -1px;
     overflow: hidden;
@@ -60,7 +60,7 @@ body h3, h5, p, label, input {
     background-color: var(--bg-card);
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(201, 162, 39, 0.15);
+    border: 0.0625rem solid rgba(201, 162, 39, 0.15);
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
 }
 
@@ -87,16 +87,16 @@ body h3, h5, p, label, input {
 }
 
 .logotipo h1 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
     color: var(--gold-light);
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
 }
 
 .slogan {
     font-size: 0.6rem;
     color: var(--text-muted);
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     margin-top: 0.2rem;
 }
 
@@ -156,8 +156,8 @@ label {
     width: 100%;
     padding: 0.8rem 1rem 0.8rem 2.8rem;
     background-color: var(--input-bg);
-    border: 1px solid var(--gold-border);
-    border-radius: 8px;
+    border: 0.0625rem solid var(--gold-border);
+    border-radius: 0.5rem;
     color: var(--text-primary);
     font-size: 0.95rem;
     outline: none;
@@ -166,7 +166,7 @@ label {
 
 .itext:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 10px rgba(201, 162, 39, 0.2);
+    box-shadow: 0 0 0.625rem rgba(201, 162, 39, 0.2);
 }
 
 /* Opciones Complementarias */
@@ -215,22 +215,27 @@ label {
     padding: 0.85rem;
     font-size: 0.9rem;
     font-weight: 700;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
     padding-left: 3rem;
     padding-right: 3rem;
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--input-bg);
     text-align: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
 .boton_inicio:hover {
     background: linear-gradient(135deg, #e8cd82 0%, #c9a227 100%);
+    color: var(--text-primary);
     box-shadow: 0 0 15px rgba(201, 162, 39, 0.3);
+    transform: scale(1.03);
 }
-
+.boton_inicio:active {
+    transform: scale(0.98);
+}
 
 .divider {
     text-align: center;
@@ -258,11 +263,15 @@ label {
     font-size: 0.75rem;
 }
 
-
+.redireccionRegistro p{
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
 .redireccionRegistro a {
     color: var(--gold-deep);
     text-decoration: none;
     font-weight: 500;
+    letter-spacing: 0.1rem;
 }
 
 .redireccionRegistro a:hover {
@@ -272,9 +281,9 @@ label {
 
 .footer-note {
     text-align: center;
-    font-size: 0.80rem;
+    font-size: 0.9  rem;
     color: var(--text-muted);
-    letter-spacing: 1.5px;
+    letter-spacing: 0.2rem;
     margin-top: 5rem;
 }
 
@@ -284,8 +293,9 @@ label {
     
 }
 
+
 /* Pantallas medianas y grandes (tablets y PC) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
     .main-container {
         flex-direction: row;
     }
