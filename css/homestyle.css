@@ -10,11 +10,15 @@
     --input-bg: #12100d;
 }
 
+/* ==========================================
+   ESTILOS GENERALES Y RESET
+   ========================================== */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
     background-color: var(--bg-primary);
@@ -24,40 +28,62 @@ body{
     flex-direction: column;
     align-items: center;
 }
+
+/* ==========================================
+   ENCABEZADO (HEADER)
+   ========================================== */
 header{
     background-color: var(--bg-card);
-    padding: 2em 2em 2em 2em;
+    padding: 1.5em 2em;
     text-align: center;
-    border: 1px solid var(--gold-border) 30%;
+    border: 1px solid var(--gold-border);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 10em;
+    gap: 1em;
     align-items: center;
     position: fixed;
-    top: 0;   
+    top: 0;
+    z-index: 1000;
 }
+
+/* ==========================================
+   CONTENEDOR DEL LOGOTIPO Y CÍRCULO
+   ========================================== */
+.brand_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Controla la distancia exacta entre el círculo y el logo */
+    gap: 0; 
+}
+
 .logo img{
     border-radius: 50%;
     width: 5em;
     height: 5em;
-
+    margin-left: 1rem;
+    margin-top: 0.4rem;
 }
 
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
 .navegacion{
     display: flex;
     justify-content: space-between;
-     position: absolute;
-     left: 35rem;
+    position: relative;
+    left: 0;
 }
 .lista_nav{
     display: flex;
     justify-content: space-between;
-    gap: 4em;   
+    gap: 2.2em;
+    font-size: 1.1rem;   
 }
 ul{
     list-style: none;
-   
 }
 a{
     text-decoration: none;
@@ -66,6 +92,10 @@ a{
 a:hover{
     color: var(--gold-light);
 }
+
+/* ==========================================
+   SECCIÓN DERECHA DEL HEADER (BÚSQUEDA Y ACCESOS)
+   ========================================== */
 .thirty_section{
     display: flex;
     justify-content: space-between;
@@ -78,7 +108,6 @@ a:hover{
   align-items: center;
 }
 
-/* Campo de entrada (Oculto inicialmente) */
 .search-input {
   width: 0;
   padding: 0;
@@ -92,12 +121,11 @@ a:hover{
   color: var(--text-primary);
 }
 
-/* Botón con el icono */
 .search-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--bg-card); /* Azul de Bootstrap */
+  background-color: var(--bg-card);
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -112,7 +140,6 @@ a:hover{
   border: 0.066rem solid var(--text-primary);
 }
 
-/* Estado activo: cuando JavaScript añade la clase '.active' al formulario */
 .search-form.active .search-input {
   width: 13.75rem;
   padding: 0.5rem 0.9375rem;
@@ -127,7 +154,9 @@ a:hover{
     font-size: 1.5em;
 }
 
-
+/* ==========================================
+   CONTENIDO PRINCIPAL Y HERO (FONDO)
+   ========================================== */
 main{
     width: 95%;
     text-align: center;
@@ -143,12 +172,25 @@ main{
     width: 100%;
     background-image: url("../img/logo_perfumes2.png");
     background-repeat: no-repeat;
-    background-size: cover;     
-    padding: 15em;
+    background-size: contain; 
+    background-position: center; 
+    background-color: var(--bg-card); 
+    padding: 16em 0; 
 }
 .tittle{
     margin-top: 2rem;
 }
+.tittle h1{
+    letter-spacing: 1rem;
+}
+.tittle h5{
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+}
+
+/* ==========================================
+   CATÁLOGO Y COLUMNAS DE PRODUCTOS
+   ========================================== */
 .contenido{
     background:
         radial-gradient(
@@ -170,17 +212,17 @@ main{
         width: 95%;
         padding: 2rem;
         display: flex;
-        justify-content: end;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
         margin-top: 2rem;
         border-radius: 2rem; 
-
 }
 .categorias{
     background-color: var(--bg-card);
     border: 0.03rem solid var(--gold-border);
-    padding-left: 6rem;
-    padding-right: 6rem;
-    margin-right: 3rem;
+    padding: 1.5rem 3rem;
+    margin-right: 0;
     margin-top: 2rem;
     text-align: center; 
     border-radius: 2rem;
@@ -188,6 +230,7 @@ main{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;    
+    width: 100%;
 }
 .contenido section{
     padding: 0.6rem;
@@ -201,51 +244,118 @@ main{
 }
 .contenido img{
     width: 15rem;
+    max-width: 100%;
+    height: auto;
 }
-.first_column{
-    border: 1px var(--gold);
+.first_column, .second_column, .thirty_column {
+    border: 1px solid var(--gold);
+    flex: 1;
+    min-width: 250px;
 }
-.first_column article{
+
+.first_column article, .second_column article, .thirty_column article{
     background-color: var(--bg-card);
     margin-top: 1rem;
     width: 100%;
     color: var(--text-muted);
-    padding-top: 1em;
     padding: 2rem;
     border-radius: 2rem;
 }
 
-
-.second_column{
-    border: 1px var(--gold);
-}
-
-.second_column article{
-    background-color: var(--bg-card);
-    margin-top: 1rem;
-    width: 100%;
-    color: var(--text-muted);
-    padding-top: 1em;
-    padding: 2rem;
-    border-radius: 2rem;
-}
-
-.thirty_column{
-    border: 1px var(--gold);
-}
-.thirty_column article{
-    background-color: var(--bg-card);
-    margin-top: 1rem;
-    width: 100%;
-    color: var(--text-muted);
-    padding-top: 1em;
-    padding: 2rem;
-    border-radius: 2rem;
-}
+/* ==========================================
+   PIE DE PÁGINA (FOOTER) Y EFECTO CÍRCULO
+   ========================================== */
 footer{
     background-color: var(--bg-card);
-    padding: 4em 12em 4em;
+    padding: 4em 2em;
     width: 100%;
     border: 1px solid var(--gold-border);
     margin-top: 1em;
+}
+/* .circulo{
+    position: relative;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    left: -6.5rem;
+    top: 0;
+    border-top: 7px solid var(--gold);
+    animation: spin 3s infinite linear;
+    flex-shrink: 0;
+}
+
+.circulo:before{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    border-top: 7px solid var(--gold-light);
+    animation: spin 3s infinite linear;
+}
+
+.circulo:after{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border-top: 7px solid var(--gold-deep);
+    animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+/* ==========================================
+   MEDIA QUERIES (ADAPTABILIDAD RESPONSIVE)
+   ========================================== */
+@media (max-width: 720px) {
+    header {
+        flex-direction: column;
+        gap: 1em;
+        position: relative;
+    }
+    .fondo {
+        margin-top: 2rem;
+        background-image: url("../img/fondo_responsive.png");
+    }
+    .lista_nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+    .tittle h1 {
+        letter-spacing: 0.3rem;
+        font-size: 1.8rem;
+    }
+    .fondo{
+        background-image: url(../img/fondo_responsive.png);
+    }
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+    .thirty_section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (min-width: 100px) and (max-width: 500px){
+    .fondo{
+        background-image: url("../img/fondo2.png");
+    }
 }
