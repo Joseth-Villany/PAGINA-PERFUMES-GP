@@ -239,6 +239,7 @@ main{
 }
 .contenido article{
     border: 1px solid var(--gold-light);
+    cursor: pointer;
 }
 .contenido article strong{
     color: var(--gold);
