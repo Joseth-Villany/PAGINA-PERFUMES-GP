@@ -205,16 +205,18 @@ li:hover{
     transform: scale(0.9);
 }
 
-.perfil{
+.perfil a{
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.9s ease;
     font-size: 1.5em;
+    color: var(--text-primary);
+    display: inline-block;
     
 }
-.perfil:hover{
+.perfil a:hover{
     transform: scale(1.3);
     color: var(--gold-light);
 }
-.perfil:active{
+.perfil a:active{
     transform: scale(0.8);
 }
 
