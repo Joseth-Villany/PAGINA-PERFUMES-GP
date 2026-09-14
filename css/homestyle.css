@@ -456,8 +456,32 @@ footer aside{
 }
 .derechos p{
     margin-top: 1rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     letter-spacing: 0.1rem;
+}
+.comeback-links{
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.comeback-login a{
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+.comeback-login a:hover{
+    color: var(--gold);
+    transform: scale(5);
+}
+
+.comeback-sign-up a{
+    border: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.9s ease;
+
+}
+.comeback-sign-up a:hover{
+    color: var(--gold);
+    transform: scale(3);
 }
 
 /* .circulo{
